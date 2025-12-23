@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProveItAuto - Terms of Use & Privacy Policy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      background-color: #f8fafb;
+      color: #1a1a2e;
+      line-height: 1.7;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #0F4C5C 0%, #1DA0B7 100%);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      opacity: 0.9;
+      font-size: 1.1rem;
+    }
+
+    .nav-tabs {
+      display: flex;
+      justify-content: center;
+      background: white;
+      border-bottom: 1px solid #e8eef2;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-tab {
+      padding: 16px 32px;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      font-weight: 600;
+      color: #64748b;
+      transition: all 0.3s;
+    }
+
+    .nav-tab:hover {
+      color: #0F4C5C;
+    }
+
+    .nav-tab.active {
+      color: #0F4C5C;
+      border-bottom-color: #0F4C5C;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .section {
+      display: none;
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    h2 {
+      color: #0F4C5C;
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #e8eef2;
+    }
+
+    h3 {
+      color: #1a1a2e;
+      font-size: 1.3rem;
+      margin: 28px 0 16px 0;
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: #475569;
+    }
+
+    ul, ol {
+      margin: 16px 0;
+      padding-left: 24px;
+      color: #475569;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .highlight-box {
+      background: #f0f9ff;
+      border-left: 4px solid #1DA0B7;
+      padding: 20px;
+      margin: 24px 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .highlight-box.warning {
+      background: #fef3c7;
+      border-left-color: #f59e0b;
+    }
+
+    .highlight-box h4 {
+      color: #0F4C5C;
+      margin-bottom: 8px;
+    }
+
+    .subscription-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+    }
+
+    .subscription-table th,
+    .subscription-table td {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid #e8eef2;
+    }
+
+    .subscription-table th {
+      background: #f8fafb;
+      color: #0F4C5C;
+      font-weight: 600;
+    }
+
+    .subscription-table tr:hover {
+      background: #f8fafb;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, #0F4C5C 0%, #1DA0B7 100%);
+      color: white;
+      padding: 30px;
+      border-radius: 12px;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .contact-box h3 {
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .contact-box a {
+      color: #a5f3fc;
+      text-decoration: none;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
+    }
+
+    .last-updated {
+      text-align: center;
+      color: #94a3b8;
+      font-size: 0.9rem;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #e8eef2;
+    }
+
+    .footer {
+      background: #1a1a2e;
+      color: #94a3b8;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+
+    .footer a {
+      color: #1DA0B7;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .nav-tab {
+        padding: 12px 16px;
+        font-size: 0.9rem;
+      }
+
+      .section {
+        padding: 24px;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .subscription-table {
+        font-size: 0.9rem;
+      }
+
+      .subscription-table th,
+      .subscription-table td {
+        padding: 10px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>🚗 ProveItAuto</h1>
+    <p>Terms of Use & Privacy Policy</p>
+  </div>
+
+  <div class="nav-tabs">
+    <div class="nav-tab active" onclick="showSection('terms')">Terms of Use</div>
+    <div class="nav-tab" onclick="showSection('privacy')">Privacy Policy</div>
+    <div class="nav-tab" onclick="showSection('subscriptions')">Subscriptions</div>
+  </div>
+
+  <div class="container">
+
+    <!-- TERMS OF USE -->
+    <div id="terms" class="section active">
+      <h2>Terms of Use (EULA)</h2>
+      
+      <p><strong>Effective Date:</strong> December 24, 2024</p>
+      
+      <p>Welcome to ProveItAuto. By downloading, installing, or using our application, you agree to be bound by these Terms of Use. Please read them carefully.</p>
+
+      <h3>1. Acceptance of Terms</h3>
+      <p>By accessing or using ProveItAuto ("the App"), you agree to comply with and be bound by these Terms of Use and our Privacy Policy. If you do not agree to these terms, please do not use the App.</p>
+
+      <h3>2. Description of Service</h3>
+      <p>ProveItAuto is a mobile application designed to help vehicle owners:</p>
+      <ul>
+        <li>Analyze repair estimates and compare prices</li>
+        <li>Diagnose vehicle sounds using AI technology</li>
+        <li>Check tire condition through image analysis</li>
+        <li>Track vehicle maintenance history</li>
+        <li>Identify dashboard warning lights</li>
+      </ul>
+
+      <div class="highlight-box warning">
+        <h4>⚠️ Important Disclaimer</h4>
+        <p>ProveItAuto provides informational guidance only and is NOT a substitute for professional mechanical inspection or advice. Always consult a qualified mechanic for vehicle repairs and safety concerns.</p>
+      </div>
+
+      <h3>3. User Accounts</h3>
+      <p>To use certain features of the App, you must create an account. You agree to:</p>
+      <ul>
+        <li>Provide accurate and complete information</li>
+        <li>Maintain the security of your account credentials</li>
+        <li>Promptly notify us of any unauthorized use</li>
+        <li>Accept responsibility for all activities under your account</li>
+      </ul>
+
+      <h3>4. Subscriptions and Payments</h3>
+      <p>ProveItAuto offers subscription plans with auto-renewable billing:</p>
+      <ul>
+        <li><strong>Free Plan:</strong> Demo access with limited features</li>
+        <li><strong>Basic Plan:</strong> $4.99/month - Includes 3 scans per month for estimates, sound diagnosis, and part identification; unlimited tire checks</li>
+        <li><strong>Pro Plan:</strong> $7.99/month - Unlimited access to all features</li>
+      </ul>
+      
+      <p><strong>Payment:</strong> Payment will be charged to your Apple ID or Google Play account at confirmation of purchase.</p>
+      
+      <p><strong>Renewal:</strong> Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period.</p>
+      
+      <p><strong>Cancellation:</strong> You may manage and cancel your subscription through your App Store or Google Play account settings. Cancellation takes effect at the end of the current billing period.</p>
+
+      <h3>5. User Content</h3>
+      <p>You retain ownership of content you upload (photos, audio recordings, vehicle information). By uploading content, you grant ProveItAuto a non-exclusive license to use, process, and analyze this content to provide our services.</p>
+
+      <h3>6. Prohibited Uses</h3>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the App for any unlawful purpose</li>
+        <li>Attempt to reverse engineer or extract source code</li>
+        <li>Interfere with or disrupt the App's functionality</li>
+        <li>Share your account credentials with others</li>
+        <li>Use automated systems to access the App</li>
+        <li>Upload malicious content or viruses</li>
+      </ul>
+
+      <h3>7. Intellectual Property</h3>
+      <p>All content, features, and functionality of ProveItAuto are owned by ProveItAuto and protected by international copyright, trademark, and other intellectual property laws.</p>
+
+      <h3>8. Limitation of Liability</h3>
+      <p>To the maximum extent permitted by law, ProveItAuto shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of the App. Our total liability shall not exceed the amount you paid for the App in the 12 months preceding the claim.</p>
+
+      <h3>9. Disclaimer of Warranties</h3>
+      <p>The App is provided "AS IS" without warranties of any kind. We do not warrant that the App will be uninterrupted, error-free, or that defects will be corrected.</p>
+
+      <h3>10. Indemnification</h3>
+      <p>You agree to indemnify and hold harmless ProveItAuto from any claims, damages, or expenses arising from your use of the App or violation of these Terms.</p>
+
+      <h3>11. Termination</h3>
+      <p>We reserve the right to terminate or suspend your account at any time for violations of these Terms. You may delete your account at any time through the App settings.</p>
+
+      <h3>12. Changes to Terms</h3>
+      <p>We may update these Terms from time to time. Continued use of the App after changes constitutes acceptance of the new Terms.</p>
+
+      <h3>13. Governing Law</h3>
+      <p>These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which ProveItAuto operates, without regard to conflict of law principles.</p>
+
+      <h3>14. Apple-Specific Terms</h3>
+      <p>If you are using the App on an Apple device:</p>
+      <ul>
+        <li>These Terms are between you and ProveItAuto, not Apple</li>
+        <li>Apple has no obligation to provide maintenance or support</li>
+        <li>Apple is not responsible for any product warranties</li>
+        <li>Apple is not responsible for addressing claims related to the App</li>
+        <li>Apple is a third-party beneficiary of these Terms</li>
+      </ul>
+      <p>You may also review Apple's Standard EULA at: <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</a></p>
+
+      <div class="contact-box">
+        <h3>Questions About Terms?</h3>
+        <p>Contact us at <a href="mailto:proveitauto@gmail.com">proveitauto@gmail.com</a></p>
+      </div>
+    </div>
+
+    <!-- PRIVACY POLICY -->
+    <div id="privacy" class="section">
+      <h2>Privacy Policy</h2>
+      
+      <p><strong>Effective Date:</strong> December 24, 2024</p>
+      
+      <p>ProveItAuto ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.</p>
+
+      <h3>1. Information We Collect</h3>
+      
+      <h4>Information You Provide:</h4>
+      <ul>
+        <li><strong>Account Information:</strong> Email address, name, phone number (optional)</li>
+        <li><strong>Vehicle Information:</strong> Make, model, year, mileage, VIN (optional)</li>
+        <li><strong>Location Data:</strong> City, postal code (for price comparisons)</li>
+        <li><strong>User Content:</strong> Photos, audio recordings, documents you upload for analysis</li>
+      </ul>
+
+      <h4>Information Collected Automatically:</h4>
+      <ul>
+        <li><strong>Device Information:</strong> Device type, operating system, unique device identifiers</li>
+        <li><strong>Usage Data:</strong> Features used, time spent in app, interaction patterns</li>
+        <li><strong>Log Data:</strong> IP address, browser type, access times</li>
+      </ul>
+
+      <h3>2. How We Use Your Information</h3>
+      <p>We use collected information to:</p>
+      <ul>
+        <li>Provide and maintain our services</li>
+        <li>Process and analyze your vehicle-related queries</li>
+        <li>Personalize your experience</li>
+        <li>Process payments and subscriptions</li>
+        <li>Send service-related communications</li>
+        <li>Improve our AI models and services</li>
+        <li>Detect and prevent fraud</li>
+        <li>Comply with legal obligations</li>
+      </ul>
+
+      <h3>3. Sharing of Information</h3>
+      <p>We may share your information with:</p>
+      <ul>
+        <li><strong>Service Providers:</strong> Cloud hosting (secure servers), payment processors (RevenueCat, Apple, Google), AI analysis services (OpenAI, Google)</li>
+        <li><strong>Legal Requirements:</strong> When required by law or to protect our rights</li>
+        <li><strong>Business Transfers:</strong> In connection with any merger or acquisition</li>
+      </ul>
+      
+      <div class="highlight-box">
+        <h4>🔒 We Do NOT:</h4>
+        <ul>
+          <li>Sell your personal information to third parties</li>
+          <li>Share your data for advertising purposes</li>
+          <li>Store payment card details (handled by Apple/Google)</li>
+        </ul>
+      </div>
+
+      <h3>4. Data Storage and Security</h3>
+      <p>Your data is stored on secure servers with industry-standard encryption. We implement appropriate technical and organizational measures to protect your information, including:</p>
+      <ul>
+        <li>SSL/TLS encryption for data in transit</li>
+        <li>Encrypted database storage</li>
+        <li>Regular security audits</li>
+        <li>Access controls and authentication</li>
+      </ul>
+
+      <h3>5. Data Retention</h3>
+      <p>We retain your information for as long as your account is active or as needed to provide services. You may request deletion of your account and associated data at any time through the App settings or by contacting us.</p>
+
+      <h3>6. Your Rights</h3>
+      <p>Depending on your location, you may have the right to:</p>
+      <ul>
+        <li>Access your personal data</li>
+        <li>Correct inaccurate data</li>
+        <li>Delete your data</li>
+        <li>Export your data</li>
+        <li>Opt out of certain processing</li>
+        <li>Withdraw consent</li>
+      </ul>
+      <p>To exercise these rights, contact us at <a href="mailto:proveitauto@gmail.com">proveitauto@gmail.com</a></p>
+
+      <h3>7. Children's Privacy</h3>
+      <p>ProveItAuto is not intended for children under 13. We do not knowingly collect information from children under 13. If you believe we have collected such information, please contact us immediately.</p>
+
+      <h3>8. International Data Transfers</h3>
+      <p>Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place for such transfers.</p>
+
+      <h3>9. Third-Party Services</h3>
+      <p>Our App may contain links to third-party services. We are not responsible for the privacy practices of these services. We encourage you to review their privacy policies.</p>
+
+      <h3>10. Changes to This Policy</h3>
+      <p>We may update this Privacy Policy periodically. We will notify you of significant changes through the App or via email. Continued use after changes constitutes acceptance.</p>
+
+      <h3>11. California Privacy Rights (CCPA)</h3>
+      <p>California residents have additional rights under the CCPA, including the right to know what personal information is collected and the right to request deletion. Contact us to exercise these rights.</p>
+
+      <h3>12. European Privacy Rights (GDPR)</h3>
+      <p>If you are in the European Economic Area, you have rights under GDPR including access, rectification, erasure, and data portability. Our legal basis for processing includes consent, contract performance, and legitimate interests.</p>
+
+      <div class="contact-box">
+        <h3>Privacy Questions?</h3>
+        <p>Contact our Privacy Team at <a href="mailto:proveitauto@gmail.com">proveitauto@gmail.com</a></p>
+      </div>
+    </div>
+
+    <!-- SUBSCRIPTIONS -->
+    <div id="subscriptions" class="section">
+      <h2>Subscription Information</h2>
+      
+      <p>ProveItAuto offers the following auto-renewable subscription plans:</p>
+
+      <table class="subscription-table">
+        <thead>
+          <tr>
+            <th>Plan</th>
+            <th>Price</th>
+            <th>Duration</th>
+            <th>Features</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Free</strong></td>
+            <td>$0</td>
+            <td>Unlimited</td>
+            <td>Demo access, preview features only</td>
+          </tr>
+          <tr>
+            <td><strong>Basic Monthly</strong></td>
+            <td>$4.99/month</td>
+            <td>1 Month (Auto-renewing)</td>
+            <td>3 estimate scans/month, 3 sound diagnoses/month, 3 part scans/month, unlimited tire checks</td>
+          </tr>
+          <tr>
+            <td><strong>Pro Monthly</strong></td>
+            <td>$7.99/month</td>
+            <td>1 Month (Auto-renewing)</td>
+            <td>Unlimited access to all features, priority support, price history, multi-car garage</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Payment & Billing</h3>
+      <ul>
+        <li>Payment will be charged to your Apple ID or Google Play account at confirmation of purchase</li>
+        <li>Subscription automatically renews unless auto-renew is turned off at least 24 hours before the end of the current period</li>
+        <li>Your account will be charged for renewal within 24 hours prior to the end of the current period</li>
+        <li>You can manage and cancel your subscriptions by going to your account settings on the App Store or Google Play after purchase</li>
+      </ul>
+
+      <h3>Free Trial</h3>
+      <p>If offered, any unused portion of a free trial period will be forfeited when you purchase a subscription.</p>
+
+      <h3>Cancellation Policy</h3>
+      <ul>
+        <li>You may cancel your subscription at any time</li>
+        <li>Cancellation takes effect at the end of the current billing period</li>
+        <li>You will continue to have access to premium features until the end of your paid period</li>
+        <li>No refunds are provided for partial subscription periods</li>
+      </ul>
+
+      <h3>How to Cancel</h3>
+      
+      <div class="highlight-box">
+        <h4>📱 On iPhone/iPad:</h4>
+        <ol>
+          <li>Open Settings</li>
+          <li>Tap your name at the top</li>
+          <li>Tap "Subscriptions"</li>
+          <li>Select ProveItAuto</li>
+          <li>Tap "Cancel Subscription"</li>
+        </ol>
+      </div>
+
+      <div class="highlight-box">
+        <h4>🤖 On Android:</h4>
+        <ol>
+          <li>Open Google Play Store</li>
+          <li>Tap Menu → Subscriptions</li>
+          <li>Select ProveItAuto</li>
+          <li>Tap "Cancel Subscription"</li>
+          <li>Follow the instructions</li>
+        </ol>
+      </div>
+
+      <h3>Refund Policy</h3>
+      <p>Refund requests are handled by Apple (App Store) or Google (Google Play) according to their respective policies:</p>
+      <ul>
+        <li><strong>Apple:</strong> <a href="https://support.apple.com/en-us/HT204084" target="_blank">Request a refund from Apple</a></li>
+        <li><strong>Google:</strong> <a href="https://support.google.com/googleplay/answer/2479637" target="_blank">Request a refund from Google Play</a></li>
+      </ul>
+
+      <h3>Pay-Per-Use Options</h3>
+      <p>In addition to subscriptions, we offer one-time scan purchases:</p>
+      <ul>
+        <li>Single Estimate Scan: $1.99</li>
+        <li>Single Sound Diagnosis: $1.99</li>
+        <li>Single Part Scan: $1.99</li>
+        <li>Single Tire Check: $0.99</li>
+      </ul>
+
+      <div class="contact-box">
+        <h3>Billing Questions?</h3>
+        <p>Contact us at <a href="mailto:proveitauto@gmail.com">proveitauto@gmail.com</a></p>
+      </div>
+    </div>
+
+    <p class="last-updated">Last Updated: December 24, 2024</p>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2024 ProveItAuto. All rights reserved.</p>
+    <p style="margin-top: 10px;">
+      <a href="#" onclick="showSection('terms'); window.scrollTo(0,0);">Terms of Use</a> | 
+      <a href="#" onclick="showSection('privacy'); window.scrollTo(0,0);">Privacy Policy</a> | 
+      <a href="#" onclick="showSection('subscriptions'); window.scrollTo(0,0);">Subscriptions</a>
+    </p>
+    <p style="margin-top: 10px;">
+      <a href="mailto:proveitauto@gmail.com">proveitauto@gmail.com</a>
+    </p>
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      // Hide all sections
+      document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+      });
+      
+      // Remove active from all tabs
+      document.querySelectorAll('.nav-tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      
+      // Show selected section
+      document.getElementById(sectionId).classList.add('active');
+      
+      // Activate corresponding tab
+      const tabs = document.querySelectorAll('.nav-tab');
+      if (sectionId === 'terms') tabs[0].classList.add('active');
+      if (sectionId === 'privacy') tabs[1].classList.add('active');
+      if (sectionId === 'subscriptions') tabs[2].classList.add('active');
+    }
+
+    // Handle direct links with hash
+    window.onload = function() {
+      const hash = window.location.hash.replace('#', '');
+      if (hash === 'privacy' || hash === 'terms' || hash === 'subscriptions') {
+        showSection(hash);
+      }
+    }
+  </script>
+
+</body>
+</html>
